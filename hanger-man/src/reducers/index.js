@@ -1,10 +1,9 @@
-import { combineReducers } from 'redux'
 import newGame from './newGame'
-import guesses from './playerLoose'
-import gameOver from './playerWin'
+import guesses from './playerWin'
+import gameOver from './playerLose'
 
-export default combineReducers({
+export default {
     newGame,
     guesses,
     gameOver
-})
+}
