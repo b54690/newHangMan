@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 // import Word from './components/gameWord'
-import NewGameButton from './components/newGameButton'
+import GameBoard from './containers/GameBoard'
 
 
 
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         {/* <Word /> */}
-        <NewGameButton/>
+        <GameBoard/>
       </div>
     );
   }
