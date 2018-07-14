@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+// import Word from './components/gameWord'
+import NewGameButton from './components/newGameButton'
+
 
 
 
@@ -7,7 +10,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        Hello
+        {/* <Word /> */}
+        <NewGameButton/>
       </div>
     );
   }
