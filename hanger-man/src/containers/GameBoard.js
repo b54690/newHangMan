@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Word from '../components/GameWord'
 import GameLogic from '../components/GameLogic'
 import HangedMan from '../components/Hangman'
+import './GameBoard.css'
 
 export default class Game extends Component {
   render() {

@@ -37,7 +37,7 @@ class GameLogic extends Component {
           } else {
             return (
               <div>
-              <p className="ShowGame">You've got {6 - this.wrongGuessCount() || 0 } more tries! </p>
+              <p className="ShowGame">You've got {6 - this.wrongGuessCount() || 0 } more attempts </p>
               </div>
             )
           }
