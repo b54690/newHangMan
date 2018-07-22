@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { newGame } from '../actions/game'
-// import './hangman.css'
+import './NewGameButton.css'
 
 class NewGameButton extends PureComponent {
 
@@ -13,7 +13,7 @@ class NewGameButton extends PureComponent {
       return(
         <button
           onClick={this.startGame.bind(this)}
-          className="newGame"
+          id="newGame"
           >
           New game!
         </button>

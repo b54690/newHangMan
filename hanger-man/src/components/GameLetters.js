@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import alphabet from '../lib/alphabet'
 import {makeGuess} from '../actions/game'
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
-// import './hangman.css'
+import './GameLetters.css'
 
 class Letters extends Component {
 
@@ -14,7 +13,7 @@ class Letters extends Component {
 
   render() {
     return (
-      <div className="keyboardBox">
+      <div id="keyboardBox">
       {alphabet.map( (letter, index) =>
           <Button
               className="keyboard"
@@ -41,8 +40,5 @@ const mapStateToProps = (state) => {
   }
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//   return bindActionCreators({ makeGuess }, dispatch);
-// }
 
 export default connect(mapStateToProps, {makeGuess})(Letters)
