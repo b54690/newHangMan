@@ -4,7 +4,7 @@ import Letters from '../components/Letters'
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Word from '../components/GameWord'
-
+import GameLogic from '../components/GameLogic'
 
 export default class Game extends Component {
   render() {
@@ -13,6 +13,7 @@ export default class Game extends Component {
       <h3 className='title'> HANGMAN</h3>
       <Word/>
       <Letters/>
+      <GameLogic/>
       <NewGameButton />
       </Paper>
     );
