@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import {gameOver} from '../actions/game'
+import {gameEnd} from '../actions/game'
 import swal from 'sweetalert'
 
 
@@ -19,7 +19,7 @@ class GameLogic extends Component {
         }
 
         else {
-            this.props.gameOver()
+            this.props.gameEnd()
             return swal("No more guesses, you're dead mate")
         }
     }
@@ -30,9 +30,9 @@ class GameLogic extends Component {
           
           if(gameOver === true) {
               return (
-                <div>
-                  <p> Game is over! You can start a new game, if you like! 👻 ✌️ </p>
-                </div>
+              <div>
+                <p> Would you like to start a new game? </p>
+              </div>
               )
           } else {
             return (
@@ -55,4 +55,4 @@ function mapStateToProps(state) {
   }
   
   
-  export default connect(mapStateToProps, {gameOver})(GameLogic)
+  export default connect(mapStateToProps, {gameEnd})(GameLogic)

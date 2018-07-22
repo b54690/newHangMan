@@ -1,6 +1,6 @@
 export const NEW_GAME = 'NEW_GAME'
 export const MAKE_GUESS = 'MAKE_GUESS'
-export const GAME_OVER = 'GAME_OVER'
+export const GAME_END = 'GAME_END'
 
 
 export function newGame() {
@@ -17,8 +17,8 @@ export function makeGuess(guess) {
   }
 }
 
-export function gameOver() {
+export function gameEnd() {
   return {
-    type: GAME_OVER,
+    type: GAME_END,
   }
 }
