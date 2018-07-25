@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 // import Paper from '@material-ui/core/Paper';
 // import PropTypes from 'prop-types'
 import {gameEnd} from '../actions/game'
-import swal from 'sweetalert'
+import swal from 'sweetalert2'
 
 
 class Word extends PureComponent {
@@ -20,15 +20,23 @@ showGuess() {
     const guesses = this.props.guesses
     const gameOver = this.props.gameOver
   
-    const randomWord =  word.split('').map(letter => (guesses.indexOf(letter) < 0) ? "_" : letter).join(" ")
+    const randomWord =  word.split('').map(letter => (guesses.indexOf(letter) < 0) ? "★" : letter).join(" ")
   
   
-    if( randomWord.indexOf('_') < 0 ) {
-      swal("Well done!! You're still alive!", {
-          icon: "success",
-        })
+    if( randomWord.indexOf('★') < 0 ) {
+      swal({
+        title: "You're still alive!",
+        imageUrl: 'https://i.gifer.com/2Yjo.gif',
+        imageWidth: 400,
+        imageHeight: 300,
+        imageAlt: 'Custom image',
+        animation: false,
+        icon: "success"
+      })
         this.props.gameEnd()
       }
+
+
   
     if(gameOver === true) {
       return word

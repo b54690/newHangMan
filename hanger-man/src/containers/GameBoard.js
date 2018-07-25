@@ -14,8 +14,8 @@ export default class Game extends Component {
       <Paper className="container">
       <h3 className='title'> HANGMAN</h3>
       <Word/>
-      <HangedMan/>
       <Letters/>
+      <HangedMan/>
       <GameLogic/>
       <NewGameButton />
       </Paper>

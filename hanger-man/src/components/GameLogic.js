@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import {gameEnd} from '../actions/game'
-import swal from 'sweetalert'
+import swal from 'sweetalert2'
 
 
 class GameLogic extends Component {
@@ -20,9 +20,19 @@ class GameLogic extends Component {
 
         else {
             this.props.gameEnd()
-            return swal("No more guesses, you're dead mate")
+            return     swal({
+                title: "No more guesses, you're done for!",
+                imageUrl: 'https://games-cdn.washingtonpost.com/images/prod/sm/5d95f8cb-4116-4548-b600-d28a9862ae1d/18708964-cdbc-4086-acd5-c2accb24156c-original.gif?ts=1468506991966',
+                imageWidth: 400,
+                imageHeight: 200,
+                imageAlt: 'Custom image',
+                animation: false,
+                icon: "error"
+              })
         }
     }
+
+
 
     render() {
         
