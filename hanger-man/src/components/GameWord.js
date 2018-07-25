@@ -25,7 +25,7 @@ showGuess() {
   
     if( randomWord.indexOf('★') < 0 ) {
       swal({
-        title: "You're still alive!",
+        title: "You've been re-elected!!",
         imageUrl: 'https://i.gifer.com/2Yjo.gif',
         imageWidth: 400,
         imageHeight: 300,
