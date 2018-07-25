@@ -21,6 +21,7 @@ class Letters extends Component {
               color="primary"
               variant="contained"
               type="button"
+              
               key={index}
               onClick={() => this.handleBtnClick(letter)}
               disabled={this.props.guesses.includes(letter) || this.props.gameOver === true }

@@ -12,9 +12,11 @@
 
 
 #leftBox {
-    float: left;
+    /* float: left; */
     width: 75px;
     overflow: hidden;
+    margin-left: 48%;
+
 }
 
 
