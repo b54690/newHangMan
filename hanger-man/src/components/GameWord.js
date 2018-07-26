@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-// import Paper from '@material-ui/core/Paper';
+import Paper from '@material-ui/core/Paper';
 // import PropTypes from 'prop-types'
 import {gameEnd} from '../actions/game'
 import swal from 'sweetalert2'
@@ -50,9 +50,9 @@ showGuess() {
      render() {
   
       return(
-        <h1>
-        <p className="ShowGame">{this.showGuess()}</p>
-        </h1>
+        <Paper>
+        <p>{this.showGuess()}</p>
+        </Paper>
       )
     }
   }

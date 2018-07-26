@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import './GameLetters.css'
 
-class Letters extends Component {
+class KeyBoard extends Component {
 
   handleBtnClick(letter) {
     this.props.makeGuess(letter);
@@ -13,15 +13,14 @@ class Letters extends Component {
 
   render() {
     return (
-      <div id="keyboardBox">
+      <div id="letters">
       {alphabet.map( (letter, index) =>
           <Button
-              className="keyboard"
+              className="letters"
               size="large"
               color="primary"
               variant="contained"
               type="button"
-              
               key={index}
               onClick={() => this.handleBtnClick(letter)}
               disabled={this.props.guesses.includes(letter) || this.props.gameOver === true }
@@ -42,4 +41,4 @@ const mapStateToProps = (state) => {
 }
 
 
-export default connect(mapStateToProps, {makeGuess})(Letters)
+export default connect(mapStateToProps, {makeGuess})(KeyBoard)

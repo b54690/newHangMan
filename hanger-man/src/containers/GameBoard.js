@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NewGameButton from '../components/NewGameButton';
-import Letters from '../components/GameLetters'
+import KeyBoard from '../components/GameLetters'
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Word from '../components/GameWord'
@@ -11,10 +11,10 @@ import './GameBoard.css'
 export default class Game extends Component {
   render() {
     return (
-      <Paper className="container">
-      <h3 className='title'> HANGMAN</h3>
+      <Paper>
+      <h1 className='title'> HANGMAN</h1>
       <Word/>
-      <Letters/>
+      <KeyBoard/>
       <HangedMan/>
       <GameLogic/>
       <NewGameButton />
