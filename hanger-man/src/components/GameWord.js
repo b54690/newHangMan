@@ -50,7 +50,7 @@ showGuess() {
      render() {
   
       return(
-        <Paper>
+        <Paper style={{fontSize: '50px'}}>
         <p>{this.showGuess()}</p>
         </Paper>
       )

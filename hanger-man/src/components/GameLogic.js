@@ -40,13 +40,13 @@ class GameLogic extends Component {
           
           if(gameOver === true) {
               return (
-              <div>
+              <div style={{fontSize: '20px'}}>
                 <p> Would you like to start a new game? </p>
               </div>
               )
           } else {
             return (
-              <div>
+              <div style={{fontSize: '20px'}}>
               <p className="ShowGame">You've got {6 - this.wrongGuessCount() || 0 } more attempts </p>
               </div>
             )
