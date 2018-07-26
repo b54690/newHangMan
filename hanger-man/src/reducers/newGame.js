@@ -1,12 +1,13 @@
-import WordList from '../lib/words'
+import list from '../lib/words'
 import { NEW_GAME } from '../actions/game'
 
-const randomWord = WordList[Math.floor(Math.random() * WordList.length)];
 
-export default function(state = randomWord, {type} ) {
+export const word = list[Math.floor(Math.random() * list.length)];
+
+export default function(state = word, {type} ) {
   switch(type) {
     case NEW_GAME :
-      return WordList[Math.floor(Math.random() * WordList.length)];
+      return list[Math.floor(Math.random() * list.length)];
 
     default :
       return state;
