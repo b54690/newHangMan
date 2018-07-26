@@ -44,7 +44,7 @@ class HangedMan extends PureComponent {
 
         return (
 
-            <div id="leftBox">
+            <div id="hanging">
                 <div>{this.showPic()}</div>
             </div>
 
