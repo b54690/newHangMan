@@ -14,7 +14,7 @@ class GameLogic extends Component {
 
         wrongGuess = guesses.filter(guess => word.indexOf(guess) < 0).length
 
-        if(wrongGuess < 6) {
+        if(wrongGuess < 7) {
             return wrongGuess
         }
 
@@ -47,7 +47,7 @@ class GameLogic extends Component {
           } else {
             return (
               <div style={{fontSize: '20px'}}>
-              <p className="ShowGame">You've got {6 - this.wrongGuessCount() || 0 } more attempts </p>
+              <p className="ShowGame">You've got {7 - this.wrongGuessCount() || 0 } more attempts </p>
               </div>
             )
           }
