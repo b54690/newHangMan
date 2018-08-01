@@ -4,6 +4,7 @@ import {gameEnd} from '../actions/game'
 import swal from 'sweetalert2'
 
 
+
 class GameLogic extends Component {
 
 
@@ -40,13 +41,13 @@ class GameLogic extends Component {
           
           if(gameOver === true) {
               return (
-              <div style={{fontSize: '20px'}}>
+              <div className="gameWords" style={{fontSize: '40px'}}>
                 <p> Would you like to start a new game? </p>
               </div>
               )
           } else {
             return (
-              <div style={{fontSize: '20px'}}>
+              <div className="gameWords" style={{fontSize: '40px'}}>
               <p className="ShowGame">You've got {7 - this.wrongGuessCount() || 0 } more attempts </p>
               </div>
             )

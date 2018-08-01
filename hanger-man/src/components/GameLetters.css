@@ -1,4 +1,10 @@
-#letters{
+/* #letters{
     margin: 0 0px 0 0;
     padding: 0px;
+} */
+
+#letters {
+    margin: 30px 400px 30px 400px;
+    padding: 10px;
+    width: auto;
 }
