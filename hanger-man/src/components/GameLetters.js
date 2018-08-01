@@ -22,6 +22,7 @@ class KeyBoard extends Component {
               variant="contained"
               type="button"
               key={index}
+              style={{margin: '4px'}}
               onClick={() => this.handleBtnClick(letter)}
               disabled={this.props.guesses.includes(letter) || this.props.gameOver === true }
               >
