@@ -21,6 +21,7 @@ showGuess() {
     const gameOver = this.props.gameOver
   
     const randomWord =  word.split('').map(letter => (guesses.indexOf(letter) < 0) ? "★" : letter).join(" ")
+
   
   
     if( randomWord.indexOf('★') < 0 ) {
@@ -50,7 +51,7 @@ showGuess() {
      render() {
   
       return(
-        <Paper style={{fontSize: '50px'}}>
+        <Paper style={{fontSize: '30px'}}>
         <p>{this.showGuess()}</p>
         </Paper>
       )
